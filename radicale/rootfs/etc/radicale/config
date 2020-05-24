@@ -1,0 +1,19 @@
+[server]
+# Bind all addresses
+hosts = 0.0.0.0:%PORT%, [::]:%PORT%
+
+[auth]
+type = htpasswd
+htpasswd_filename = /etc/radicale/users
+htpasswd_encryption = %ENCRYPTION_METHOD%
+
+[storage]
+filesystem_folder = /data/collections
+
+[rights]
+type = %RIGHTS_TYPE%
+#FROM_FILEfile = /etc/radicale/rights
+
+[logging]
+level = %LOG_LEVEL%
+mask_passwords = True
