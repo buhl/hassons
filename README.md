@@ -1,2 +1,2 @@
 # hassons
-hassio add-ons
+Home Assistant OS addons

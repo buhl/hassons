@@ -4,15 +4,15 @@ hosts = 0.0.0.0:%PORT%, [::]:%PORT%
 
 [auth]
 type = htpasswd
-htpasswd_filename = /etc/radicale/users
+htpasswd_filename = /addons/radicale/config/users
 htpasswd_encryption = %ENCRYPTION_METHOD%
 
 [storage]
-filesystem_folder = /data/collections
+filesystem_folder = /addons/radicale/collections
 
 [rights]
 type = %RIGHTS_TYPE%
-#FROM_FILEfile = /etc/radicale/rights
+#FROM_FILEfile = /addons/radicale/config/rights
 
 [logging]
 level = %LOG_LEVEL%

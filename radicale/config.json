@@ -1,6 +1,6 @@
 {
     "name": "Radicale",
-    "version": "3.0.1",
+    "version": "3.0.6-r0",
     "slug": "radicale",
     "description": "Free and Open-Source CalDAV and CardDAV Server",
     "url": "https://github.com/buhl/hassons/tree/master/radicale",
@@ -8,8 +8,14 @@
     "startup": "services",
     "webui": "http://[HOST]:[PORT:5232]/",
     "boot": "auto",
+    "image": "buhl/radicale-{arch}",
     "apparmor": true,
+    "init": false,
     "stage": "experimental",
+    "map": [
+        "ssl:ro",
+        "addons:rw"
+    ],
     "options": {
         "credentials": [
             {"username": "user1", "password": "password1"}
@@ -35,7 +41,6 @@
                 "permissions": "rw"
             }
         ],
-        "log_level": "warning",
         "encryption_method": "md5"
     },
     "ports": {
